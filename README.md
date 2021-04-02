@@ -19,9 +19,18 @@ Membutuhkan daftar nama customer pada transaksi tahun 2017 di Albuquerque. `if($
 
 ## Cara Pengerjaan 2C
 
-Membutuhkan segment customer dan jumlah transaksinya yang paling sedikit. Karena mencari yang paling sedikit, `min` diinisialisasikan menjadi `9999` yaitu angka paling maksimal, Setelah itu dilakukan iterasi dan terdapat percabangan didalamnya, maka akan terus dicari yang paling sedikit terus akan ditampilkan.
+![2c_sisop](https://user-images.githubusercontent.com/57633103/113432227-32a09a00-9407-11eb-8f8d-fb5cdfd84b1b.png)
+
+Membutuhkan segment customer dan jumlah transaksinya yang paling sedikit. Karena mencari yang paling sedikit, `min` diinisialisasikan menjadi `9999` yaitu angka paling maksimal, Setelah itu dilakukan iterasi `for(seg in c)` dan terdapat percabangan didalamnya `if(min > c[seg])`, maka akan terus dicari yang paling sedikit terus akan ditampilkan di `bukan1.txt`.
+
+![2c_sisop_output](https://user-images.githubusercontent.com/57633103/113432235-346a5d80-9407-11eb-9149-9fdbb467a21c.png)
 
 ## Cara Pengerjaan 2D
 
-mencari wilayah bagian (region) yang memiliki total keuntungan (profit) paling sedikit dan total keuntungan wilayah tersebut. Hampir sama dengan `2c` perbedaannya terdapat pada kolom, untuk `2c` menggunakan kolom nomor `8`. Mengunakan `NF` yaitu kolom paling belakang diinisialisasikan sebagai profit
-Setelah itu jika `NR > 1` maka index nya bertambah sesuai profitnya. Beranjak ke `END` nya setelah diinisialisasi `min` ke angka paling besar, masuk ke iterasi, jika `min > c[reg]` maka `min` nya akan berubah menjadi kecil agar ketemu angka paling kecilnya.
+![2d_sisop](https://user-images.githubusercontent.com/57633103/113432238-346a5d80-9407-11eb-8f03-0c48898e7c0b.png)
+
+mencari wilayah bagian (region) yang memiliki total keuntungan (profit) paling sedikit dan total keuntungan wilayah tersebut. Hampir sama dengan `2c` perbedaannya terdapat pada kolom, untuk `2c` menggunakan kolom `$8` sedangakan `2d` kolom `$13` Mengunakan `NF` yaitu kolom paling belakang diinisialisasikan sebagai profit
+Setelah itu jika `NR > 1` maka index nya bertambah sesuai profitnya. Beranjak ke `END` nya setelah diinisialisasi `min` ke angka paling besar, masuk ke iterasi `for(reg in c)`, jika `min > c[reg]` maka `min` nya akan berubah menjadi kecil agar ketemu angka paling kecilnya terus akan ditampilkan di `bukan1.txt`.
+
+![2d_sisop_output](https://user-images.githubusercontent.com/57633103/113432241-3502f400-9407-11eb-9e51-ee0f3755d94a.png)
+
